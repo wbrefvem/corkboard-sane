@@ -19,6 +19,18 @@ module.exports = function(environment) {
     }
   };
 
+  ENV.contentSecurityPolicyHeader = 'Content-Security-Policy-Report-Only';
+
+  ENV.contentSecurityPolicy = {
+    'default-src': "'none'",
+    'script-src': "'self' http://www.google-analytics.com",
+    'font-src': "'self' http://fonts.gstatic.com",
+    'connect-src': "'self' http://localhost:1337",
+    'img-src': "'self' http://www.raleighnc.gov",
+    'style-src': "'self' http://fonts.googleapis.com",
+    'media-src': "'self'",
+  };
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
