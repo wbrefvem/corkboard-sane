@@ -4,7 +4,7 @@
   "description": "A blank sane stack project.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "You haven't written any tests yet. Bad dog! No!"
   },
   "author": "",
   "license": "MIT",
