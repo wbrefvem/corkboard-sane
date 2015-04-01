@@ -42,35 +42,29 @@ module.exports = {
         altDates: {
             type: 'array',
         },
-        eventDayContact: {
+        contact: {
             model: 'contact',
             required: true 
         },
-        eventStartTime: {
+        startTime: {
             type: 'datetime',
             required: true
         },
-        eventEndTime: {
+        endTime: {
             type: 'datetime',
             required: true
         },
-        setUpStartTIme: {
+        setUpTime: {
             type: 'datetime',
             required: true
         },
-        tearDownEndTime: {
+        tearDownTime: {
             type: 'datetime',
             required: true
         },
-        routeDescription: {
-            type: 'text',
+        route: {
+            model: 'route',
             required: true
-        },
-        routeMap: {
-            type: 'string'
-        },
-        routeUrl: {
-            type: 'string'
         },
         comments: {
             type: 'string'
