@@ -1,27 +1,24 @@
 language: node_js
-
 node_js:
-    - "0.12"
-    - "0.10"
-
+- '0.12'
+- '0.10'
 sudo: false
-
 cache:
   directories:
-    - node_modules
-
+  - node_modules
 before_install:
-    - "npm config set spin false"
-    - "npm install -g npm@^2"
-    - "npm install -g bower"
-    - "npm install -g mocha"
-
+- npm config set spin false
+- npm install -g npm@^2
+- npm install -g bower
+- npm install -g mocha
 install:
-    - npm install
-    - cd client && npm install && bower install
-    - cd ../server && npm install
-    - cd ..
-
+- npm install
+- cd client && npm install && bower install
+- cd ../server && npm install
+- cd ..
 script:
-    - cd client && npm test
-    - cd ../server && mocha
+- cd client && npm test
+- cd ../server && mocha
+notifications:
+  slack:
+    secure: VMrjME/ePCFeOnSa1ahuHACkVLmPZ67Fpi4ai2E1HxuzpyEfWNrzGtMzsWX44ThpyzyYPHX1qEYf2dEgLSdP8ObrjDqicg8PaukRjKBo9oC55f43bo7F3t7AmGz4kijOk0WcQxbRt1yfhWQGremPnmKmS2YzomjKviFKEO8z1dY=
