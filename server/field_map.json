@@ -39,14 +39,17 @@
         "Production Organization:": "name",
         "Organization Type:": "type"
     },
+
     "beneficiary": {
         "Benefitting Charity/Group:": "name"
     },
+    
     "contact": {
         "Contact Name:": "name",
         "Telephone:": "telephone",
         "Cell:": "cell"
     },
+    
     "route": {
         "Please specify the exact location(s) for your start/finish lines or other areas that you will need right-of-way closures outside of the specified route or outside of the duration of the race. Please i": "description",
         "Upload Detailed Route Map:": "map",
