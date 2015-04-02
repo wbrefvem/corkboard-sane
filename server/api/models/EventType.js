@@ -7,15 +7,15 @@
 
 module.exports = {
 
-    attributes: {
-        text: {
-            type: 'string',
-            required: true
-        },
-        specialEvents: {
-            collection: 'specialEvent',
-            via: 'eventTypes'
-        }
+  attributes: {
+    text: {
+      type: 'string',
+      required: true
+    },
+    specialEvents: {
+      collection: 'specialEvent',
+      via: 'eventTypes'
     }
+  }
 };
 

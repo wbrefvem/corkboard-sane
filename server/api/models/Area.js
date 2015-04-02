@@ -7,16 +7,16 @@
 
 module.exports = {
 
-    attributes: {
-        name: {
-            type: 'string',
-            required: true
-        },
-        specialEvents: {
-            collection: 'specialEvent',
-            via: 'areas',
-            required: true
-        }
+  attributes: {
+    name: {
+      type: 'string',
+      required: true
+    },
+    specialEvents: {
+      collection: 'specialEvent',
+      via: 'areas',
+      required: true
     }
+  }
 };
 

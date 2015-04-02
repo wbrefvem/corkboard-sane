@@ -55,8 +55,8 @@ module.exports.http = {
   ****************************************************************************/
 
     requestLogger: function (req, res, next) {
-        sails.log("Requested :: ", req.method, req.url);
-        return next();
+      sails.log("Requested :: ", req.method, req.url);
+      return next();
     }
 
 
