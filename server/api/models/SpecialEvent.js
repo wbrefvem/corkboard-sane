@@ -8,40 +8,50 @@
 module.exports = {
 
   attributes: {
+
     location: {
       type: 'string',
       required: true
     },
+
     organizations: {
       collection: 'organization',
       via: 'specialEvents',
       required: true
     },
+
     dateSubmitted: {
       type: 'datetime',
       required: true
     },
+
+
     website: {
       type: 'string',
       required: true
     },
+
     purpose: {
       type: 'string',
       required: true
     },
+
     beneficiaries: {
       collection: 'beneficiary',
       via: 'specialEvents',
       required: true
     },
+
     date: {
       type: 'date',
       columnName: 'waterline_date',
       required: true
     },
+
     altDates: {
       type: 'array',
     },
+
     contact: {
       model: 'contact',
       required: true 
@@ -50,91 +60,110 @@ module.exports = {
       type: 'datetime',
       required: true
     },
+
     endTime: {
       type: 'datetime',
       required: true
     },
+
     setUpTime: {
       type: 'datetime',
       required: true
     },
+
     tearDownTime: {
       type: 'datetime',
       required: true
     },
+
     route: {
       model: 'route',
       required: true
     },
+
     comments: {
       type: 'string'
     },
+
     eventTypes: {
-      collection: 'eventType',
-      via: 'specialEvents',
+      type: 'string',
       required: true
     },
+
     participantTypes: {
-      collection: 'participantType',
-      via: 'specialEvents',
+      type: 'string',
       required: true
     },
+
     annualEvent: {
       type: 'boolean'
     },
+
     estimatedAttendance: {
       type: 'integer',
       required: true
     },
+
     previousAttendance: {
       type: 'integer',
     },
+
     areas: {
-      collection: 'area',
-      via: 'specialEvents',
+      type: 'string',
+      enum: [
+          "North Hills", 
+          "None of the above areas", 
+          "City Greenways", 
+          "Hillsborough Street", 
+          "Wakefield", 
+          "Other Downtown Locations", 
+          "Cameron Village / Cameron Park area", 
+          "Boylan Heights", 
+          "City Plaza", 
+          "City Plaza AstroTurf", 
+          "Moore Square", 
+          "Oakwood / Mordecai"
+      ],
       required: true
     },
+
+    closures: {
+      type: 'string',
+      required: true
+    },
+
     trashRemovalPlan: {
       type: 'string',
       required: true
     },
+
     emergencyActionPlan: {
       type: 'string',
       required: true
     },
+
     alcohol: {
       type: 'boolean'
     },
+
     food: {
       type: 'boolean'
     },
+
     largeTentsOrInflatables: {
       type: 'boolena'
     },
+
     busImpact: {
       type:'boolean'
     },
+
     amplifiedMusic: {
       type: 'boolean'
     },
+
     openFlames: {
       type: 'boolean'
-    },
-    holdHarmlessAgree: {
-      type: 'boolean',
-      required: true
-    },
-    seNotifReqsAgree: {
-      type: 'boolean',
-      required: true
-    },
-    legalAgree: {
-      type: 'boolean',
-      required: true
-    },
-    appFeeAgree: {
-      type: 'boolean',
-      required: true
     }
   }
 };
