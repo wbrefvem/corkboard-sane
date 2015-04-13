@@ -25,7 +25,6 @@ module.exports = {
       required: true
     },
 
-
     website: {
       type: 'string',
       required: true
@@ -109,20 +108,20 @@ module.exports = {
     },
 
     areas: {
-      type: 'string',
+      type: 'array',
       enum: [
-          "North Hills", 
-          "None of the above areas", 
-          "City Greenways", 
-          "Hillsborough Street", 
-          "Wakefield", 
-          "Other Downtown Locations", 
-          "Cameron Village / Cameron Park area", 
-          "Boylan Heights", 
-          "City Plaza", 
-          "City Plaza AstroTurf", 
-          "Moore Square", 
-          "Oakwood / Mordecai"
+        "North Hills", 
+        "None of the above areas", 
+        "City Greenways", 
+        "Hillsborough Street", 
+        "Wakefield", 
+        "Other Downtown Locations", 
+        "Cameron Village / Cameron Park area", 
+        "Boylan Heights", 
+        "City Plaza", 
+        "City Plaza AstroTurf", 
+        "Moore Square", 
+        "Oakwood / Mordecai"
       ],
       required: true
     },
