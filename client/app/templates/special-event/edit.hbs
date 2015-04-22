@@ -1,0 +1,30 @@
+<div class="col-md-6">
+  <form>
+    <div class="form-group">
+      <label {{bind-attr for=view.eventName.elementId}}>Event Name</label>
+      {{input type='text' viewName='eventName' class='form-control' value=model.name placeholder="Event Name"}}
+    </div>
+    <div class="form-group">
+      <label {{bind-attr for=view.location.elementId}}>Location</label>
+      {{input type="text" class="form-control" viewName="location" placeholder="Location" value=model.location}}
+    </div>
+    <div class="form-group">
+      <label {{bind-attr for=view.purpose.elementId}}>Purpose</label>
+      {{input type="text" class="form-control" viewName="purpose" placeholder="Purpose" value=model.purpose}}
+    </div>
+    <div class="form-group">
+      <label>Organizations</label>
+      {{#each organization in organizations}}
+      {{input type="text" class="form-control" value=organization.name}}
+      {{/each}}
+    </div>
+    <div class="form-group">
+      <label {{bind-attr for=view.dateSubmitted.elementId}}>Date Submitted</label>
+      {{input type="text" class="form-control" viewName="dateSubmitted" placeholder="Date Submitted" value=model.dateSubmitted}}
+    </div>
+    <div class="form-group">
+      <label {{bind-attr for=view.website.elementId}}>Website</label>
+      {{input type="text" class="form-control" viewName="date" placeholder="Website" value=model.website}}
+    </div>
+  </form>
+</div>

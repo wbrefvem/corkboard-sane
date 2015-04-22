@@ -1,0 +1,13 @@
+
+<div class="row">
+  <div class="col-md-6">
+	  <ul>
+		{{#each specialEvent in model}}
+		  <li>{{specialEvent.date}} | {{specialEvent.name}} | {{specialEvent.status}} | [{{#link-to 'special-event.index' specialEvent}}detail{{/link-to}}]  [{{#link-to 'special-event.edit' specialEvent}}edit{{/link-to}}]</li>
+		{{/each}}
+	  </ul>
+  </div>
+  <div class="col-md-6">
+    {{outlet}}
+  </div>
+</div>

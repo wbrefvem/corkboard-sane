@@ -9,6 +9,11 @@ module.exports = {
 
   attributes: {
 
+    name: {
+      type: 'string',
+      required: true
+    },
+
     location: {
       type: 'string',
       required: true
@@ -38,12 +43,12 @@ module.exports = {
     beneficiaries: {
       collection: 'beneficiary',
       via: 'specialEvents',
-      required: true
+      required: true,
+      dominant: true
     },
 
     date: {
       type: 'date',
-      columnName: 'waterline_date',
       required: true
     },
 
@@ -85,12 +90,21 @@ module.exports = {
     },
 
     eventTypes: {
-      type: 'string',
+      type: 'array',
+      enum: [
+        "Road Race",
+        "Parade"
+      ],
       required: true
     },
 
     participantTypes: {
-      type: 'string',
+      type: 'array',
+      enum: [
+        "Runner",
+        "Walker",
+        "Motorist"
+      ],
       required: true
     },
 
@@ -150,7 +164,7 @@ module.exports = {
     },
 
     largeTentsOrInflatables: {
-      type: 'boolena'
+      type: 'boolean'
     },
 
     busImpact: {
@@ -163,6 +177,10 @@ module.exports = {
 
     openFlames: {
       type: 'boolean'
+    },
+
+    status: {
+      type: 'string'
     }
   }
 };

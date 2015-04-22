@@ -18,7 +18,7 @@ function createObjects(fixture, next) {
     if (err) throw err;
 
     Sails.log.info(data.length + ' objects of type ' + fixture.model.capitalizeFirstLetter() + ' destroyed.');
-    Sails.log.info('Creating new objects from fixtures...');
+    Sails.log.info('Creating new objects of type ' + fixture.model.capitalizeFirstLetter() + ' from fixtures...');
 
     model.create(items).exec(function(err, data) {
       if (err) next(err);
