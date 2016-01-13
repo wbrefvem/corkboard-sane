@@ -3,8 +3,8 @@ import Ember from 'ember';
 
 export default DS.RESTAdapter.extend({
   coalesceFindRequests: true,
-  namespace: 'cascade/api',
-  host: 'http://localhost:8008',
+  namespace: 'api/v1',
+  host: 'http://localhost:1337',
 
   pathForType: function(type) {
     var dasherized = Ember.String.dasherize(type);
